@@ -33,7 +33,7 @@
     export PATH="$PATH:/usr/local/bin/"
     export PATH="/Users/luke/Development/Android/android-sdk-macosx/platform-tools:/Users/luke/Development/Android/android-sdk-macosx/tools:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
  
-#   Set Default Editor (change 'Vim' to the editor of your choice)
+#   Set Default Editor
 #   ------------------------------------------------------------
     export EDITOR=/usr/bin/vim
  
@@ -43,12 +43,9 @@
     export BLOCKSIZE=1k
  
 #   Add color to terminal
-#   (this is all commented out as I use Mac Terminal Profiles)
-#   from http://osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x/
 #   ------------------------------------------------------------
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
-# source "`brew --prefix grc`/etc/grc.bashrc" 
  
 #   -----------------------------
 #   2.  MAKE TERMINAL BETTER
@@ -68,7 +65,7 @@ alias .3='cd ../../../'                     # Go back 3 directory levels
 alias .4='cd ../../../../'                  # Go back 4 directory levels
 alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
-# alias edit='subl'                           # edit:         Opens any file in sublime editor
+alias edit='subl'                           # edit:         Opens any file in sublime editor
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
