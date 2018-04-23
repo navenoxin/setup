@@ -35,7 +35,7 @@
  
 #   Set Default Editor
 #   ------------------------------------------------------------
-    export EDITOR=/usr/bin/vim
+    export EDITOR=/usr/local/bin/subl
  
 #   Set default blocksize for ls, df, du
 #   from this: http://hints.macworld.com/comment.php?mode=view&cid=24491
@@ -311,3 +311,4 @@ alias gs='git status'
 alias gpl='git pull'
 alias gph='git push'
 alias gca='git commit -am'
+alias gd='git diff'
