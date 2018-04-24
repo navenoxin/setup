@@ -26,12 +26,13 @@
  
 #   Change Prompt
 #   ------------------------------------------------------------
-    export PS1="\w @ \h(\u): "
+    # export PS1="\w @ \h(\u): "
+    export PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \[\033[0;36m\]\h \w\[\033[0;32m\]$(__git_ps1)\n\[\033[0;32m\]└─\[\033[0m\033[0;32m\] \$\[\033[0m\033[0;32m\] ▶\[\033[0m\] '
  
 #   Set Paths
 #   ------------------------------------------------------------
     export PATH="$PATH:/usr/local/bin/"
-    export PATH="/Users/luke/Development/Android/android-sdk-macosx/platform-tools:/Users/luke/Development/Android/android-sdk-macosx/tools:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
+    export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
  
 #   Set Default Editor
 #   ------------------------------------------------------------
@@ -307,9 +308,18 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 #   ---------------------------------------
 #   10.  GIT
 #   ---------------------------------------
+
+# Common aliases
 alias gs='git status'
 alias gpl='git pull'
 alias gph='git push'
 alias gca='git commit -am'
 alias gd='git diff'
 alias gl='git log'
+
+# Autocompletion and prompt
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+source ~/.git-prompt.sh
+source ~/.git-completion.bash
